@@ -1,5 +1,11 @@
-DROP DATABASE IF EXISTS exampledb;
-CREATE DATABASE exampledb;
+CREATE DATABASE chirpy;
+USE chirpy;
 
-DROP DATABASE IF EXISTS testdb;
-CREATE DATABASE testdb;
+CREATE TABLE `chirps` (
+  `id` Int( 11 ) AUTO_INCREMENT NOT NULL,
+  `author` VARCHAR( 255) NOT NULL,
+  `body` VARCHAR( 255 ) NOT NULL,
+  `created_at` DATETIME NOT NULL,
+
+  PRIMARY KEY ( `id` ) 
+);

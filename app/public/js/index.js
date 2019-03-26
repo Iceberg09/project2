@@ -97,3 +97,56 @@ var handleDeleteBtnClick = function() {
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
+
+$.get("/api/all", function(data) {
+
+  if (data.length !== 0) {
+
+    for (var i = 0; i < data.length; i++) {
+
+      var row = $("<div>");
+      row.addClass("report");
+
+      row.append("<p>" + data[i].author + " reported.. </p>");
+      row.append("<p>" + data[i].body + "</p>");
+      row.append("<p>At " + moment(data[i].created_at).format("h:mma on dddd") + "</p>");
+
+      $("#report-area").prepend(row);
+
+    }
+
+  }
+
+});
+
+////// Report
+
+$("#report-submit").on("click", function(event) {
+  event.preventDefault();
+
+  var newReport = {
+    author: $("#author").val().trim(),
+    body: $("#report-box").val().trim(),
+    created_at: moment().format("YYYY-MM-DD HH:mm:ss")
+  };
+
+  console.log(newReport);
+
+  $.post("/api/new", newReport)
+    .then(function() {
+
+      var row = $("<div>");
+      row.addClass("report");
+
+      row.append("<p>" + newReport.author + " reported: </p>");
+      row.append("<p>" + newReport.body + "</p>");
+      row.append("<p>At " + moment(newReport.created_at).format("h:mma on dddd") + "</p>");
+
+      $("#report-area").prepend(row);
+
+    });
+
+  // Empty input box
+  $("#author").val("");
+  $("#report-box").val("");
+});
