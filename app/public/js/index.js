@@ -105,13 +105,13 @@ $.get("/api/all", function(data) {
     for (var i = 0; i < data.length; i++) {
 
       var row = $("<div>");
-      row.addClass("chirp");
+      row.addClass("report");
 
-      row.append("<p>" + data[i].author + " chirped.. </p>");
+      row.append("<p>" + data[i].author + " reported.. </p>");
       row.append("<p>" + data[i].body + "</p>");
       row.append("<p>At " + moment(data[i].created_at).format("h:mma on dddd") + "</p>");
 
-      $("#chirp-area").prepend(row);
+      $("#report-area").prepend(row);
 
     }
 
@@ -119,38 +119,34 @@ $.get("/api/all", function(data) {
 
 });
 
-////// Chirp
+////// Report
 
-// When user chirps (clicks addBtn)
-$("#chirp-submit").on("click", function(event) {
+$("#report-submit").on("click", function(event) {
   event.preventDefault();
 
-  // Make a newChirp object
-  var newChirp = {
+  var newReport = {
     author: $("#author").val().trim(),
-    body: $("#chirp-box").val().trim(),
+    body: $("#report-box").val().trim(),
     created_at: moment().format("YYYY-MM-DD HH:mm:ss")
   };
 
-  console.log(newChirp);
+  console.log(newReport);
 
-  // Send an AJAX POST-request with jQuery
-  $.post("/api/new", newChirp)
-    // On success, run the following code
+  $.post("/api/new", newReport)
     .then(function() {
 
       var row = $("<div>");
-      row.addClass("chirp");
+      row.addClass("report");
 
-      row.append("<p>" + newChirp.author + " chirped: </p>");
-      row.append("<p>" + newChirp.body + "</p>");
-      row.append("<p>At " + moment(newChirp.created_at).format("h:mma on dddd") + "</p>");
+      row.append("<p>" + newReport.author + " reported: </p>");
+      row.append("<p>" + newReport.body + "</p>");
+      row.append("<p>At " + moment(newReport.created_at).format("h:mma on dddd") + "</p>");
 
-      $("#chirp-area").prepend(row);
+      $("#report-area").prepend(row);
 
     });
 
-  // Empty each input box by replacing the value with an empty string
+  // Empty input box
   $("#author").val("");
-  $("#chirp-box").val("");
+  $("#report-box").val("");
 });
