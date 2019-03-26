@@ -1,7 +1,27 @@
 var db = require("../models");
 
 module.exports = function(app) {
-  // Load index page
+  // Login and Home Page
+  app.get("/", function(req, res) {
+    db.Example.findAll({}).then(function(dbExamples) {
+      res.render("index", {
+        msg: "Welcome!",
+        examples: dbExamples
+      });
+    });
+  });
+
+  // User Dashboard
+  app.get("/", function(req, res) {
+    db.Example.findAll({}).then(function(dbExamples) {
+      res.render("index", {
+        msg: "Welcome!",
+        examples: dbExamples
+      });
+    });
+  });
+
+  // Login and Home Page
   app.get("/", function(req, res) {
     db.Example.findAll({}).then(function(dbExamples) {
       res.render("index", {
