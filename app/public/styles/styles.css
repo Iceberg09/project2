@@ -42,7 +42,7 @@ p {
 
 #footer {
   height:25px;
-  text-align:center;
-  columns: #555555;
-  background-color:#CEFFCE;
+  text-align: center;
+  color: #fcf4f4;
+  background-color:rgb(82, 109, 82);
 }
