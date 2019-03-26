@@ -2,7 +2,7 @@
   line-height: 2.5;
 }
 
-.chirp {
+.report {
   padding: 10px;
   margin: 10px;
   background-color: #e8f9ff;
@@ -38,4 +38,11 @@ textarea {
 p {
   margin: 0;
   font-size: 16px;
+}
+
+#footer {
+  height:25px;
+  text-align:center;
+  columns: #555555;
+  background-color:#CEFFCE;
 }
