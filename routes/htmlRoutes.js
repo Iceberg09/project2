@@ -1,44 +1,29 @@
-var db = require("../models");
+// Dependencies
+// =============================================================
+var path = require("path");
+//var db = require("../models");
 
+// Routes
+// =============================================================
 module.exports = function(app) {
   // Login and Home Page
   app.get("/", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.render("index", {
-        msg: "Welcome!",
-        examples: dbExamples
-      });
-    });
+    res.sendFile(path.join(__dirname, "../public/index.html"));
   });
 
   // User Dashboard Page
   app.get("/user", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.render("index", {
-        msg: "Welcome!",
-        examples: dbExamples
-      });
-    });
+    res.sendFile(path.join(__dirname, "../public/user-dashboard.html"));
   });
 
   // Admin Dashboard Page
   app.get("/admin", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.render("index", {
-        msg: "Welcome!",
-        examples: dbExamples
-      });
-    });
+    res.sendFile(path.join(__dirname, "../public/admin-dashboard.html"));
   });
 
   // Reports Page
-  app.get("/reports", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.render("index", {
-        msg: "Welcome!",
-        examples: dbExamples
-      });
-    });
+  app.get("/report", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/report-driver.html"));
   });
 
   // // Load example page and pass in an example by id
@@ -52,6 +37,6 @@ module.exports = function(app) {
 
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
-    res.render("404");
+    res.sendFile(path.join(__dirname, "../public/404.html"));
   });
 };
