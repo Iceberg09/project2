@@ -18,8 +18,8 @@ module.exports = function(app) {
   });
 
   // Create New User Page
-  app.get("/newuser", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/html/newuser.html"));
+  app.get("/createaccount", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/html/createaccount.html"));
   });
 
   // User Dashboard Page
@@ -44,7 +44,7 @@ module.exports = function(app) {
 
   // Reviews Page
   app.get("/newreview", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/report-driver.html"));
+    res.sendFile(path.join(__dirname, "../public/newreviews.html"));
   });
 
   // Driver of the Month Page
