@@ -7,25 +7,50 @@ var path = require("path");
 // Routes
 // =============================================================
 module.exports = function(app) {
-  // Login and Home Page
+  // Landing Page Page
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/index.html"));
+    res.sendFile(path.join(__dirname, "../public/html/index.html"));
+  });
+
+  // Login Page
+  app.get("/login", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/html/login.html"));
+  });
+
+  // Create New User Page
+  app.get("/newuser", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/html/newuser.html"));
   });
 
   // User Dashboard Page
-  app.get("/user", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/user-dashboard.html"));
+  app.get("/dashboard", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/dashboard.html"));
   });
 
-  // Admin Dashboard Page
-  app.get("/admin", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/admin-dashboard.html"));
+  // My Profile Page
+  app.get("/myprofile", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/myprofile.html"));
+  });
+
+  // My Settings Page
+  app.get("/settings", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/settings.html"));
   });
 
   // Reports Page
-  app.get("/report", function(req, res) {
+  app.get("/reports", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/reports.html"));
+  });
+
+  // Reviews Page
+  app.get("/newreview", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/report-driver.html"));
   });
+
+  // Driver of the Month Page
+  app.get("/bestdriver", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/bestdriver.html"));
+  });  
 
   // // Load example page and pass in an example by id
   // app.get("/example/:id", function(req, res) {
