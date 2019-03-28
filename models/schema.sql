@@ -1,9 +1,10 @@
+--Delete project2_db if it already exists
 DROP DATABASE IF EXISTS project2_db;
+--Create project2_db
 CREATE DATABASE project2_db;
 
-USE project2_db;
-
-CREATE TABLE cars (
+--Table outlines
+/* CREATE TABLE cars (
     id INT AUTO_INCREMENT PRIMARY KEY,
     make VARCHAR(50) NOT NULL,
     model VARCHAR(50) NOT NULL,
@@ -27,4 +28,4 @@ CREATE TABLE reviews (
     comment VARCHAR(300),
     date_time DATETIME,
     location VARCHAR(100)
-);
+); */
