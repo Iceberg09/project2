@@ -24,33 +24,33 @@ module.exports = function(app) {
 
   // User Dashboard Page
   app.get("/dashboard", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/dashboard.html"));
+    res.sendFile(path.join(__dirname, "../public/html/dashboard.html"));
   });
 
   // My Profile Page
   app.get("/myprofile", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/myprofile.html"));
+    res.sendFile(path.join(__dirname, "../public/html/myprofile.html"));
   });
 
   // My Settings Page
   app.get("/settings", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/settings.html"));
+    res.sendFile(path.join(__dirname, "../public/html/settings.html"));
   });
 
   // Reports Page
   app.get("/reports", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/reports.html"));
+    res.sendFile(path.join(__dirname, "../public/html/reports.html"));
   });
 
   // Reviews Page
   app.get("/newreview", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/newreviews.html"));
+    res.sendFile(path.join(__dirname, "../public/html/newreview.html"));
   });
 
   // Driver of the Month Page
   app.get("/bestdriver", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/bestdriver.html"));
-  });  
+    res.sendFile(path.join(__dirname, "../public/html/bestdriver.html"));
+  });
 
   // // Load example page and pass in an example by id
   // app.get("/example/:id", function(req, res) {
@@ -63,6 +63,6 @@ module.exports = function(app) {
 
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/404.html"));
+    res.sendFile(path.join(__dirname, "../public/html/404.html"));
   });
 };
