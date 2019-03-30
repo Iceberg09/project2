@@ -67,74 +67,75 @@
         <div class="container main">
             <div class="row">
                 <div class="col-sm-8 col-sm-offset-2">
-                  <div class="card card-default">
-                    <div class="card-header">Review a Driver</div>
-                    <div class="card-body">
-                      <h6 class="cool-font">Name</h6>
-                      <input class="form-control" type="text" id="author" placeholder="Enter Your Name">
-                      <br>
-                      <h6 class="cool-font">Date/Time</h6>
-                      <input class="form-control" type="text" id="date" placeholder="00/00/00">
-                      <br>
-                      <h6 class="cool-font">Location</h6>
-                      <input class="form-control" type="text" id="location" placeholder="Enter Location">
-                      <br>
-                      <h6 class="cool-font">License Plate</h6>
-                      <input class="form-control" type="text" id="plate" placeholder="XXX-XXX">
-                      <br>
-                      <h6 class="cool-font">Car Make/Model/Color</h6>
-                      <input class="form-control" type="text" id="model" placeholder="Toyota/Rav4/Red">
-                      <br>
-                      <h6 class="cool-font">Rating</h6>
-                      <input class="form-control" type="text" id="rating" placeholder="1 - 10">
-                      <br>
-                      <h6 class="cool-font">Road Reports</h6>
-                      <textarea class="form-control" rows="3" id="report-box" placeholder="Enter Report Here!"></textarea>
-                      <br><br>
-                      <button id="report-submit" class="btn btn-primary btn-lg mx-auto d-block">Submit!</button>
-                      <br><br>
+                    <div class="card card-default">
+                        <div class="card-header">Review a Driver</div>
+                        <div class="card-body">
+                            <h6 class="cool-font">Name</h6>
+                            <input class="form-control" type="text" id="author" placeholder="Enter Your Name">
+                            <br>
+                            <h6 class="cool-font">Date/Time</h6>
+                            <input class="form-control" type="text" id="date" placeholder="00/00/00">
+                            <br>
+                            <h6 class="cool-font">Location</h6>
+                            <input class="form-control" type="text" id="location" placeholder="Enter Location">
+                            <br>
+                            <h6 class="cool-font">License Plate</h6>
+                            <input class="form-control" type="text" id="plate" placeholder="XXX-XXX">
+                            <br>
+                            <h6 class="cool-font">Car Make/Model/Color</h6>
+                            <input class="form-control" type="text" id="model" placeholder="Toyota/Rav4/Red">
+                            <br>
+                            <h6 class="cool-font">Rating</h6>
+                            <input class="form-control" type="text" id="rating" placeholder="1 - 10">
+                            <br>
+                            <h6 class="cool-font">Road Reports</h6>
+                            <textarea class="form-control" rows="3" id="report-box"
+                                placeholder="Enter Report Here!"></textarea>
+                            <br><br>
+                            <button id="report-submit" class="btn btn-primary btn-lg mx-auto d-block">Submit!</button>
+                            <br><br>
+                        </div>
                     </div>
-                  </div>
-              </div>
-        <!--end of main content div-->
+                </div>
+                <!--end of main content div-->
 
-    </div>
+            </div>
 
 
-    <footer class="sticky footer">
-        <div class="container">
-            <span class="text-muted">
-                <p>2019  &copy;   Road Review Central</p>
-            </span>
-        </div>
-    </footer>
-
+            <footer class="sticky footer">
+                <div class="container">
+                    <span class="text-muted">
+                        <p>2019 &copy; Road Review Central</p>
+                    </span>
+                </div>
+            </footer>
 
 
 
-    <!-- jQuery CDN - Slim version (=without AJAX) -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <!-- Popper.JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
-        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
-        crossorigin="anonymous"></script>
-    <!-- Bootstrap JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
-        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
-        crossorigin="anonymous"></script>
 
-    <script>
-        //sidebar collapse/expand logic
-        $(document).ready(function () {
+            <!-- jQuery CDN - Slim version (=without AJAX) -->
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous"></script>
+            <!-- Popper.JS -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+                integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+                crossorigin="anonymous"></script>
+            <!-- Bootstrap JS -->
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+                integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+                crossorigin="anonymous"></script>
 
-            $('#sidebarCollapse').on('click', function () {
-                $('#sidebar').toggleClass('active');
-            });
+            <script>
+                //sidebar collapse/expand logic
+                $(document).ready(function () {
 
-        });
-    </script>
+                    $('#sidebarCollapse').on('click', function () {
+                        $('#sidebar').toggleClass('active');
+                    });
+
+                });
+            </script>
 
 </body>
 
