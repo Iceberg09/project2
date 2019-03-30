@@ -65,17 +65,49 @@
 
         <!--main content div. content here can change based on page route-->
         <div class="container main">
-            <div class="card">
-                <div class="card-body">
-                    
-            </div>
-        </div>
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2">
+                  <div class="card card-default">
+                    <div class="card-header">Review a Driver</div>
+                    <div class="card-body">
+                      <h6 class="cool-font">Name</h6>
+                      <input class="form-control" type="text" id="author" placeholder="Enter Your Name">
+                      <br>
+                      <h6 class="cool-font">Date/Time</h6>
+                      <input class="form-control" type="text" id="date" placeholder="00/00/00">
+                      <br>
+                      <h6 class="cool-font">Location</h6>
+                      <input class="form-control" type="text" id="location" placeholder="Enter Location">
+                      <br>
+                      <h6 class="cool-font">License Plate</h6>
+                      <input class="form-control" type="text" id="plate" placeholder="XXX-XXX">
+                      <br>
+                      <h6 class="cool-font">Car Make/Model/Color</h6>
+                      <input class="form-control" type="text" id="model" placeholder="Toyota/Rav4/Red">
+                      <br>
+                      <h6 class="cool-font">Rating</h6>
+                      <input class="form-control" type="text" id="rating" placeholder="1 - 10">
+                      <br>
+                      <h6 class="cool-font">Road Reports</h6>
+                      <textarea class="form-control" rows="3" id="report-box" placeholder="Enter Report Here!"></textarea>
+                      <br><br>
+                      <button id="report-submit" class="btn btn-primary btn-lg mx-auto d-block">Submit!</button>
+                      <br><br>
+                    </div>
+                  </div>
+              </div>
         <!--end of main content div-->
 
     </div>
 
 
-
+    <footer class="sticky footer">
+        <div class="container">
+            <span class="text-muted">
+                <p>2019  &copy;   Road Review Central</p>
+            </span>
+        </div>
+    </footer>
 
 
 

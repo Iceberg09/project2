@@ -1,11 +1,3 @@
-.footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-  }
-
   .wrapper {
     display: flex;
     
@@ -54,6 +46,8 @@ a[data-toggle="collapse"] {
 body {
     font-family: 'Poppins', sans-serif;
     background: #fafafa;
+    margin-bottom: 100px;
+    clear: both;
 }
 
 p {
@@ -114,4 +108,29 @@ ul ul a {
 
 .main {
     padding-top: 2.5%;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 110px;
+    width: 100%;
+    text-align: center;
+    padding: 50px;
+    background-image: url("../images/footImg.jpg");
+    background-repeat: repeat;
+    background-size:cover;
+    box-shadow: inset 0 0 30px #000000;
+    background-color: pink;
+}
+
+p {
+    font-size:15px;
+    color: #fff;
+    text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
 }
