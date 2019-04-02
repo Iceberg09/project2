@@ -12,7 +12,6 @@ module.exports = function (app) {
     });
   });
 
-<<<<<<< HEAD
   app.get("/api/cars/:model", function (req, res) {
     db.cars.findAll({
       where: {
@@ -20,16 +19,6 @@ module.exports = function (app) {
       }
     }).then(function (dbModels) {
       res.json(dbModels);
-=======
-  //Create a new user
-  app.post("/api/users", function(req, res) {
-    console.log(req.body);
-    db.Users.create({
-      username: req.body.username,
-      password: req.body.password
-    }).then(function(dbUser) {
-      res.json(dbUser);
->>>>>>> 0c5b3714b094047db30665c29aed1475df127934
     });
   });
 

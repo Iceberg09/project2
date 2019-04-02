@@ -17,6 +17,8 @@ $(document).ready(function() {
 
     console.log(newUser);
 
-    $.post("/api/users", newUser, console.log("hello"));
+    $.post("/api/users", newUser, function() {
+      window.location.href="/dashboard";
+    });
   })
 });
