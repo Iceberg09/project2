@@ -55,7 +55,23 @@ p {
     font-size: 1.1em;
     font-weight: 300;
     line-height: 1.7em;
-    color: #999;
+    /* color: #999; */
+    font-size:15px;
+    color: #000;
+    /* text-shadow:
+		-1px -1px 0 #fff,
+		1px -1px 0 #fff,
+		-1px 1px 0 #fff,
+		1px 1px 0 #fff; */
+}
+
+.user-name {
+    color: #fff;
+    text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
 }
 
 a, a:hover, a:focus {
@@ -137,14 +153,10 @@ h2 {
     line-height: 50px;
 }
 
+
+
 p {
-    font-size:15px;
-    color: #fff;
-    text-shadow:
-		-1px -1px 0 #000,
-		1px -1px 0 #000,
-		-1px 1px 0 #000,
-		1px 1px 0 #000;
+    
 }
 
 .delete-btn {
