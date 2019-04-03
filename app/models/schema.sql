@@ -20,6 +20,7 @@ CREATE TABLE users (
 
 CREATE TABLE reviews (
     id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
     make VARCHAR(50) NOT NULL,
     model VARCHAR(50) NOT NULL,
     color VARCHAR(50),

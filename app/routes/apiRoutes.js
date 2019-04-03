@@ -54,4 +54,23 @@ module.exports = function (app) {
       res.json(err);
     })
   })
+
+  //New Review API
+  app.post("/api/newreviews", function(req, res) {
+    db.review.create({
+      name: req.body.name,
+      make: req.body.make,
+      model: req.body.model,
+      color: req.body.color,
+      license_plate: req.body.license_plate,
+      rating: req.body.rating,
+      comment: req.body.comment,
+      date_time: req.body.date_time,
+      location: req.body.location
+    }).then(function(dbReview) {
+      res.json(dbReview);
+    }).catch(function(err) {
+      res.json(err);
+    });
+  });
 };
