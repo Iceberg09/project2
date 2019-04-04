@@ -162,3 +162,8 @@ p {
 .delete-btn {
     color: #ff0000;
 }
+
+
+.modal-to-dashboard {
+    background-color: #ff6060;
+}

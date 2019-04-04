@@ -16,6 +16,16 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../styles/style.css">
 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
 
 </head>
 
@@ -93,10 +103,14 @@
                     <input class="form-control" type="text" id="rating" placeholder="1 - 10">
                     <br>
                     <h6 class="cool-font">Road Reports</h6>
-                    <textarea class="form-control" rows="3" id="report-box"
-                        placeholder="Enter Report Here!"></textarea>
+                    <textarea class="form-control" rows="3" id="report-box" placeholder="Enter Report Here!"></textarea>
                     <br><br>
-                    <button id="report-submit" class="btn btn-dark btn-lg mx-auto d-block">Submit!</button>
+                    <!-- Button trigger modal -->
+                    <div class="text-center">
+                        <button type="button" class="btn btn-dark report-submit" data-toggle="modal" data-target="#exampleModal">
+                            Submit
+                        </button>
+                    </div>
                     <br><br>
                 </div>
             </div>
@@ -114,20 +128,42 @@
             </div>
         </footer>
 
+        <!-- Modal -->
+        <div class="modal fade text-center" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Sent</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="modal-text">Thank you for your submission!</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                        <a href="/dashboard"><button type="button" class="btn btn-primary modal-to-dashboard">Back to Dashboard</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 
-            <!-- jQuery CDN - Slim version (=without AJAX) -->
-            <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-            <!-- Popper.JS -->
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
-                integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
-                crossorigin="anonymous"></script>
-            <!-- Bootstrap JS -->
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
-                integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
-                crossorigin="anonymous"></script>
+
+        <!-- jQuery CDN - Slim version (=without AJAX) -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <!-- Popper.JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+            integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+            crossorigin="anonymous"></script>
+        <!-- Bootstrap JS -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+            integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+            crossorigin="anonymous"></script>
 
         <script src="../js/newreview.js"></script>
 
