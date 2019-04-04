@@ -1,4 +1,5 @@
 var exports = module.exports = {}
+var path = require("path");
 
 exports.home = function (req, res) {
 
@@ -14,4 +15,10 @@ exports.home = function (req, res) {
 
     res.sendFile(path.join(__dirname, "../public/html/createaccount.html"));
   
+}
+
+exports.fourohfour = function (req, res) {
+
+  res.sendFile(path.join(__dirname, "../public/html/index.html"));
+
 }

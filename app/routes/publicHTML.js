@@ -16,3 +16,9 @@ module.exports = function(app, models) {
     app.get('/createaccount', publicController.createAccount);
     
 };
+
+module.exports = function(app, models) {
+
+    app.get('/*', publicController.fourohfour);
+
+};

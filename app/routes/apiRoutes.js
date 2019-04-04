@@ -74,5 +74,14 @@ module.exports = function (app) {
     });
   });
 
-   
+  //Delete User API
+  app.delete("/api/users/:email", function(req, res) {
+    db.user.destroy({
+      where: {
+        email: req.params.email
+      }
+    }).then(function() {
+      res.end();
+    })
+  })
 };
