@@ -1,9 +1,9 @@
-$(document).ready(function() {
-  $("#sidebarCollapse").on("click", function() {
+$(document).ready(function () {
+  $("#sidebarCollapse").on("click", function () {
     $("#sidebar").toggleClass("active");
   });
 
-  $("#report-submit").click(function(event) {
+  $("#report-submit").click(function (event) {
     event.preventDefault();
 
     var name = $("#author");
@@ -30,8 +30,13 @@ $(document).ready(function() {
 
     console.log(newReview);
 
-    $.post("/api/newreviews", newReview, function() {
+    $.post("/api/newreviews", newReview, function () {
       window.location.href = "/dashboard";
     });
   });
+
+  $('#myModal').on('shown.bs.modal', function () {
+    $('#report-submit').trigger('focus')
+  })
+
 });
