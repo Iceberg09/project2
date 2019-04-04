@@ -11,26 +11,24 @@
 </head>
 <body>
 
-
   
   <div class="container">
     <img src="../images/crash.jpg" class=" mx-auto d-block">
-    <form>
+    <form action="/createaccount" method="POST">
         <div class="form-group col-6 mx-auto d-block">
           <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="form-control" id="email1" aria-describedby="emailHelp" placeholder="Enter email">
+          <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
           <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
         </div>
         <div class="form-group col-6 mx-auto d-block">
           <label for="exampleInputPassword1">Password</label>
-          <input type="password" class="form-control" id="password1" placeholder="Password">
+          <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
         </div>
         <div class="form-group col-6 mx-auto d-block">
-                <label for="exampleInputPassword1">Confirm Password</label>
-                <input type="password" class="form-control" id="password2" placeholder="Password">
-              </div>
-        
-        <button type="submit" id="create-user" class="btn btn-outline-primary mx-auto d-block btn-lg">Submit</button>
+          <label for="exampleInputPassword1">Confirm Password</label>
+          <input type="password" name="confirmPassword" class="form-control" id="password2" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-outline-primary mx-auto d-block btn-lg">Submit</button>
       </form>
     </div>
     <br>
@@ -45,21 +43,6 @@
           </span>
       </div>
   </footer>
-
-  <script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
-  <!-- Popper.JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
-    integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
-    crossorigin="anonymous"></script>
-  <!-- Bootstrap JS -->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
-    integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
-    crossorigin="anonymous"></script>
-
-  <script src="../js/createaccount.js"></script>
 
 </body>
 </html>
