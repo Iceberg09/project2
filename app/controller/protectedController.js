@@ -1,5 +1,6 @@
 var exports = module.exports = {}
 var path = require("path");
+
 exports.dashboard = function (req, res) {
 
     res.sendFile(path.join(__dirname, "../public/html/dashboard.html"));

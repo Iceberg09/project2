@@ -26,7 +26,7 @@ require('./app/config/passport.js')(passport,db.user);
 
 // Routes
 
-// require("./app/routes/apiRoutes")(app, db);
+require("./app/routes/apiRoutes")(app, db);
 require("./app/routes/auth.js")(app,passport);
 require("./app/routes/protectedHTML.js")(app, db);
 require("./app/routes/publicHTML.js")(app, db);
