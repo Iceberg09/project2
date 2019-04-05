@@ -2,6 +2,7 @@ $(document).ready(function () {
   $("#sidebarCollapse").on("click", function () {
     $("#sidebar").toggleClass("active");
   });
+});
 
   /* $(".delete-button").click(function () {
 
